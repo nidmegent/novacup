@@ -1,67 +1,365 @@
-<!-- index.html -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>NovaCup | VALORANT Tournament</title>
-  <link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>NovaCup | VALORANT Tournament</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&display=swap" rel="stylesheet">
+
+<script defer src="script.js"></script>
 </head>
-<body>
-  <header class="hero">
-    <nav class="navbar">
-      <h1 class="logo">NovaCup</h1>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#schedule">Schedule</a></li>
-        <li><a href="#prize">Prize</a></li>
-        <li><a href="#join">Join</a></li>
-      </ul>
-    </nav>
 
-    <div class="hero-content">
-      <p class="tag">THE ULTIMATE :contentReference[oaicite:0]{index=0} TOURNAMENT</p>
-      <h2>Fight for Glory.<br>Claim the Crown.</h2>
-      <p class="date">August 24, 2026 | Online</p>
-      <a href="#join" class="btn">ENTER NOW</a>
-    </div>
-  </header>
+<body class="booting">
 
-  <section id="about" class="section">
-    <h2>About NovaCup</h2>
-    <p>
-      NovaCup is a competitive VALORANT tournament where top teams battle
-      for supremacy, prize money, and prestige.
-    </p>
-  </section>
+<!-- ========================= -->
+<!-- LOADING -->
+<!-- ========================= -->
 
-  <section id="schedule" class="section dark">
-    <h2>Schedule</h2>
-    <div class="timeline">
-      <div>Entry Deadline - Aug 20</div>
-      <div>Bracket Reveal - Aug 22</div>
-      <div>Main Event - Aug 24</div>
-      <div>Grand Final - Aug 25</div>
-    </div>
-  </section>
+<div id="loader">
 
-  <section id="prize" class="section">
-    <h2>Prize Pool</h2>
-    <div class="prizes">
-      <div class="card">🥇 1st - ¥50,000</div>
-      <div class="card">🥈 2nd - ¥20,000</div>
-      <div class="card">🥉 3rd - ¥10,000</div>
-    </div>
-  </section>
+<div class="loader-content">
 
-  <section id="join" class="section dark">
-    <h2>Join the Battle</h2>
-    <p>Register now and prove your team is the strongest.</p>
-    <a href="#" class="btn">REGISTER</a>
-  </section>
+<img src="assets/novacup-logo.png" class="loader-logo">
 
-  <footer>
-    <p>© 2026 NovaCup. All Rights Reserved.</p>
-  </footer>
+<h2>CONNECTING TO NOVACUP...</h2>
+
+<div class="progress-box">
+<div id="progress-bar"></div>
+</div>
+
+<div id="progress-text">0%</div>
+
+</div>
+
+</div>
+
+<!-- ========================= -->
+<!-- PARTICLES -->
+<!-- ========================= -->
+
+<div class="particles"></div>
+
+<!-- ========================= -->
+<!-- HEADER -->
+<!-- ========================= -->
+
+<header>
+
+<div class="logo">
+
+<img src="assets/novacup-logo.png">
+
+</div>
+
+<nav>
+
+<a href="#about">ABOUT</a>
+<a href="#schedule">SCHEDULE</a>
+<a href="#rules">RULES</a>
+<a href="#faq">FAQ</a>
+
+</nav>
+
+</header>
+
+<!-- ========================= -->
+<!-- HERO -->
+<!-- ========================= -->
+
+<section class="hero">
+
+<div class="hero-overlay"></div>
+
+<div class="hero-content">
+
+<img src="assets/novacup-logo.png" class="hero-logo">
+
+<h1>VALORANT COMMUNITY TOURNAMENT</h1>
+
+<p>
+全国のプレイヤーが集う
+ハイレベルなオンライン大会
+</p>
+
+<div class="hero-buttons">
+
+<a href="https://forms.gle/fE2DY7Bfta7Knyzy9"
+target="_blank"
+class="btn-red">
+ENTRY
+</a>
+
+<a href="https://discord.gg/t8CJj48xGB"
+target="_blank"
+class="btn-outline">
+DISCORD
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+<!-- COUNTDOWN -->
+<!-- ========================= -->
+
+<section class="countdown-section">
+
+<h2>TOURNAMENT COUNTDOWN</h2>
+
+<div class="countdown">
+
+<div class="time-box">
+<span id="days">00</span>
+<p>DAYS</p>
+</div>
+
+<div class="time-box">
+<span id="hours">00</span>
+<p>HOURS</p>
+</div>
+
+<div class="time-box">
+<span id="minutes">00</span>
+<p>MINUTES</p>
+</div>
+
+<div class="time-box">
+<span id="seconds">00</span>
+<p>SECONDS</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+<!-- ABOUT -->
+<!-- ========================= -->
+
+<section id="about" class="section">
+
+<h2>TOURNAMENT INFO</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>GAME</h3>
+<p>VALORANT</p>
+</div>
+
+<div class="card">
+<h3>FORMAT</h3>
+<p>5 vs 5</p>
+</div>
+
+<div class="card">
+<h3>ENTRY</h3>
+<p>FREE</p>
+</div>
+
+<div class="card">
+<h3>SERVER</h3>
+<p>JAPAN</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+<!-- JOIN -->
+<!-- ========================= -->
+
+<section class="section">
+
+<h2>HOW TO JOIN</h2>
+
+<div class="steps">
+
+<div class="step">
+<h3>STEP 1</h3>
+<p>Discordへ参加</p>
+</div>
+
+<div class="step">
+<h3>STEP 2</h3>
+<p>フォーム送信</p>
+</div>
+
+<div class="step">
+<h3>STEP 3</h3>
+<p>運営から連絡</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+<!-- SCHEDULE -->
+<!-- ========================= -->
+
+<section id="schedule" class="section">
+
+<h2>SCHEDULE</h2>
+
+<div class="schedule-box">
+
+<div class="schedule-item">
+<span>19:00</span>
+<p>受付開始</p>
+</div>
+
+<div class="schedule-item">
+<span>19:30</span>
+<p>開会式</p>
+</div>
+
+<div class="schedule-item">
+<span>20:00</span>
+<p>Round 1</p>
+</div>
+
+<div class="schedule-item">
+<span>22:00</span>
+<p>Final</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+<!-- RULES -->
+<!-- ========================= -->
+
+<section id="rules" class="section">
+
+<h2>RULES</h2>
+
+<div class="rules-box">
+
+<ul>
+
+<li>チート禁止</li>
+<li>暴言禁止</li>
+<li>スマーフ禁止</li>
+<li>ゴースティング禁止</li>
+<li>運営指示に従うこと</li>
+<li>Discord参加必須</li>
+<li>アカウント共有禁止</li>
+<li>その他運営判断</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+<!-- PRIZE -->
+<!-- ========================= -->
+
+<section class="section">
+
+<h2>PRIZE</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>🥇 CHAMPION</h3>
+<p>COMING SOON</p>
+</div>
+
+<div class="card">
+<h3>🥈 RUNNER-UP</h3>
+<p>COMING SOON</p>
+</div>
+
+<div class="card">
+<h3>🥉 3RD PLACE</h3>
+<p>COMING SOON</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+<!-- FAQ -->
+<!-- ========================= -->
+
+<section id="faq" class="section">
+
+<h2>FAQ</h2>
+
+<div class="faq">
+
+<div class="faq-item">
+<h3>ソロ参加できますか？</h3>
+<p>できません。</p>
+</div>
+
+<div class="faq-item">
+<h3>Discordは必須ですか？</h3>
+<p>必須です。</p>
+</div>
+
+<div class="faq-item">
+<h3>参加費はかかりますか？</h3>
+<p>無料です。</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+<!-- CTA -->
+<!-- ========================= -->
+
+<section class="cta">
+
+<h2>READY TO COMPETE?</h2>
+
+<a href="https://forms.gle/fE2DY7Bfta7Knyzy9"
+target="_blank"
+class="btn-red">
+ENTRY NOW
+</a>
+
+</section>
+
+<!-- ========================= -->
+<!-- FOOTER -->
+<!-- ========================= -->
+
+<footer>
+
+<img src="assets/novacup-logo.png">
+
+<p>© 2026 NovaCup Tournament</p>
+
+<div class="footer-links">
+
+<a href="https://discord.gg/t8CJj48xGB">
+Discord
+</a>
+
+<a href="#">
+YouTube
+</a>
+
+</div>
+
+</footer>
+
 </body>
 </html>
