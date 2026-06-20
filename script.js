@@ -42,7 +42,7 @@ const loading = setInterval(() => {
 // COUNTDOWN
 // =========================
 
-// ↓ 大会日時を変更して使う
+// ↓ 大会日時変更
 const tournamentDate = new Date(
     "2026-08-15T19:00:00"
 ).getTime();
@@ -427,25 +427,19 @@ function renderHexGrid(){
             : 0;
 
             drawHexagon(
-                const glow =
-Math.random() > 0.995;
+                x,
+                y+offset,
+                size
+            );
 
-if(glow){
+        }
 
-    hexCtx.strokeStyle =
-    "rgba(0,180,255,0.9)";
+    }
 
-    hexCtx.shadowBlur = 20;
-
-    hexCtx.shadowColor =
-    "#00b4ff";
-
-}else{
-
-    hexCtx.strokeStyle =
-    "rgba(0,180,255,0.15)";
-
-    hexCtx.shadowBlur = 0;
+    requestAnimationFrame(
+        renderHexGrid
+    );
 
 }
+
 renderHexGrid();
