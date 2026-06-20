@@ -427,19 +427,25 @@ function renderHexGrid(){
             : 0;
 
             drawHexagon(
-                x,
-                y+offset,
-                size
-            );
+                const glow =
+Math.random() > 0.995;
 
-        }
+if(glow){
 
-    }
+    hexCtx.strokeStyle =
+    "rgba(0,180,255,0.9)";
 
-    requestAnimationFrame(
-        renderHexGrid
-    );
+    hexCtx.shadowBlur = 20;
+
+    hexCtx.shadowColor =
+    "#00b4ff";
+
+}else{
+
+    hexCtx.strokeStyle =
+    "rgba(0,180,255,0.15)";
+
+    hexCtx.shadowBlur = 0;
 
 }
-
 renderHexGrid();
