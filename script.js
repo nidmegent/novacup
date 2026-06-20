@@ -328,3 +328,118 @@ animateParticles
 }
 
 animateParticles();
+
+// =========================
+// HEX GRID
+// =========================
+
+const hexCanvas =
+document.getElementById("hexCanvas");
+
+const hexCtx =
+hexCanvas.getContext("2d");
+
+function resizeHex(){
+
+    hexCanvas.width =
+    window.innerWidth;
+
+    hexCanvas.height =
+    window.innerHeight;
+
+}
+
+resizeHex();
+
+window.addEventListener(
+"resize",
+resizeHex
+);
+
+function drawHexagon(x,y,size){
+
+    hexCtx.beginPath();
+
+    for(let i=0;i<6;i++){
+
+        const angle =
+        (Math.PI/3)*i;
+
+        const px =
+        x + size*Math.cos(angle);
+
+        const py =
+        y + size*Math.sin(angle);
+
+        if(i===0){
+            hexCtx.moveTo(px,py);
+        }else{
+            hexCtx.lineTo(px,py);
+        }
+
+    }
+
+    hexCtx.closePath();
+
+    hexCtx.strokeStyle =
+    "rgba(0,180,255,0.15)";
+
+    hexCtx.lineWidth = 1;
+
+    hexCtx.stroke();
+
+}
+
+function renderHexGrid(){
+
+    hexCtx.clearRect(
+        0,
+        0,
+        hexCanvas.width,
+        hexCanvas.height
+    );
+
+    const size = 40;
+
+    const hexHeight =
+    Math.sqrt(3) * size;
+
+    const hexWidth =
+    size * 2;
+
+    for(
+        let y=0;
+        y<hexCanvas.height+hexHeight;
+        y+=hexHeight
+    ){
+
+        for(
+            let x=0;
+            x<hexCanvas.width+hexWidth;
+            x+=hexWidth*0.75
+        ){
+
+            let offset =
+            Math.floor(
+                x/(hexWidth*0.75)
+            ) % 2
+            ? hexHeight/2
+            : 0;
+
+            drawHexagon(
+                x,
+                y+offset,
+                size
+            );
+
+        }
+
+    }
+
+    requestAnimationFrame(
+        renderHexGrid
+    );
+
+}
+
+renderHexGrid();
